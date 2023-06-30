@@ -1,0 +1,33 @@
+# run: conda env create --file environment.yml
+name: VarBEDfGPPaper
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+- python>3.10
+- anaconda
+- pip>19.0
+- numpy
+- pandas
+- pytorch=2.0
+- scipy
+- tqdm
+- h5py=3.9
+- matplotlib=3.7
+- seaborn=0.12
+- dill
+- mpire
+- joblib
+#jupyter helpers
+- jupyter
+- jupyterlab
+- nb_conda_kernels
+# other less important helpers
+- segyio
+- pip:
+  - git+https://github.com/dominik-strutz/GeoBED@GJI_07_2023_Paper_version
+  # raytracing libs
+  - pykonal
+# variables:
+#   #necessary for some of the UOE servers
+#   HDF5_USE_FILE_LOCKING=FALSE
